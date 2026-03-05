@@ -1,33 +1,33 @@
 // 1. Szimulálj 100 dobást hat oldalú dobókockával! Készíts statisztikát a dobásokról! Végül
 // írd ki, hogy hány átlag feletti dobás volt!
 
-function dobokocka() {
-    let dobások = [];
-    for (let i = 0; i < 100; i++) {
-        dobások.push(Math.floor(Math.random() * 6) + 1);
-    }
-    return dobások;
-}
-
-function statisztika(dobások) {
-    let stat = {};
-    for (let i = 1; i <= 6; i++) {
-        stat[i] = dobások.filter(dobás => dobás === i).length;
-    }
-    return stat;
-}
-
-function atlagFeletti(dobások) {
-    let atlag = dobások.reduce((a, b) => a + b, 0) / dobások.length;
-    let atlagFelettiDobások = dobások.filter(dobás => dobás > atlag).length;
-    return atlagFelettiDobások;
-}
-
-let dobások = dobokocka();
-let stat = statisztika(dobások);
-console.log("Statisztika:", stat);
-let atlagFelettiDobások = atlagFeletti(dobások);
-console.log("Átlag feletti dobások száma:", atlagFelettiDobások);
+// function dobokocka() {
+    // let dobások = [];
+    // for (let i = 0; i < 100; i++) {
+        // dobások.push(Math.floor(Math.random() * 6) + 1);
+    // }
+    // return dobások;
+// }
+// 
+// function statisztika(dobások) {
+    // let stat = {};
+    // for (let i = 1; i <= 6; i++) {
+        // stat[i] = dobások.filter(dobás => dobás === i).length;
+    // }
+    // return stat;
+// }
+// 
+// function atlagFeletti(dobások) {
+    // let atlag = dobások.reduce((a, b) => a + b, 0) / dobások.length;
+    // let atlagFelettiDobások = dobások.filter(dobás => dobás > atlag).length;
+    // return atlagFelettiDobások;
+// }
+// 
+// let dobások = dobokocka();
+// let stat = statisztika(dobások);
+// console.log("Statisztika:", stat);
+// let atlagFelettiDobások = atlagFeletti(dobások);
+// console.log("Átlag feletti dobások száma:", atlagFelettiDobások);
 
 // 2. Tölts fel egy 100 elemű tömböt -50 és 50 közötti véletlenszámokkal!
 // a. Írasd ki a tömb legnagyobb értékű elemét és annak indexét!
