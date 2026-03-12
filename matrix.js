@@ -4,8 +4,8 @@
 // c. Sámold ki az átlók elemeinek összegét!
 
 let matrix = []
-let sor = 3
-let oszlop = 3
+let sor = 4
+let oszlop = 4
 let min = 0
 let max = 9
 
@@ -65,5 +65,10 @@ for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
         oszlopOsszeg += matrix[j][i]
     }
-    console.log(oszlopOsszeg);
+    // console.log(oszlopOsszeg);
+    oszlopOsszegek.push(oszlopOsszeg)
+}
+console.log(oszlopOsszegek);
+for (const element of oszlopOsszegek) {
+    console.log(element);
 }
