@@ -72,3 +72,15 @@ console.log(oszlopOsszegek);
 for (const element of oszlopOsszegek) {
     console.log(element);
 }
+
+// C
+foaAtloOsszeg = 0
+mellekatloOsszeg = 0
+for (let i = 0; i < matrix.length; i++) {
+    foaAtloOsszeg = matrix[i][i]
+    mellekatloOsszeg = matrix[i][(matrix.length - 1) - i]
+}
+console.log("Átló");
+console.log(foaAtloOsszeg);
+console.log("Mellékátló");
+console.log(mellekatloOsszeg);
